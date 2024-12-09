@@ -7,14 +7,14 @@ on:
       - main
 
 jobs:
-  deploy_list_wecontextify:
+  deploy_waitlist_gameswapp:
     runs-on: ubuntu-latest
-    name: Deploy list.weContextify.com
+    name: Deploy 
     steps:
       - uses: actions/checkout@v4
 
       - name: Set Name
-        run: sed -i 's/name = "post2sheets"/name = "post2sheets-list-wecontextify-com"/g' wrangler.toml
+        run: sed -i 's/name = "post2sheets"/name = "post2sheets-waitlist-gameswapp-com"/g' wrangler.toml
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
